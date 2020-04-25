@@ -1,0 +1,26 @@
+- defaults:
+    link:
+      create: true
+      relink: true
+      force: true
+
+- clean: ['~']
+
+- shell:
+  -
+    command: zsh .prezto
+    description: Installing Prezto.
+    stdout: true
+    stderr: true
+
+- link:
+    ~/.gitconfig:
+    ~/.prettierignore:
+    ~/.prettierrc:
+    ~/.zsh_aliases:
+    ~/.zlogin:
+    ~/.zlogout:
+    ~/.zpreztorc:
+    ~/.zprofile:
+    ~/.zshenv:
+    ~/.zshrc:

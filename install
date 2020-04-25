@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+set -e
+
+INSTALL_DIR="setup"
+
+cd "${INSTALL_DIR}"
+
+sh apps.sh
+sh nvm.sh
+sh node.sh

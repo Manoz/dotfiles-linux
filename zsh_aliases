@@ -1,0 +1,91 @@
+# Reload Bash.
+alias rr='exec zsh'
+
+# Edit zshrc in VSCode.
+alias al='c ~/.zshrc'
+
+# Navigate to the previous directory.
+alias -- -='cd -'
+alias ..='cd ..'
+
+# Various shortcuts.
+alias dl='cd ~/Downloads'
+alias dt='cd ~/Desktop'
+alias wk='cd ~/Work'
+alias si='cd ~/Sites'
+
+#
+# Editors
+#
+
+# VSCode.
+alias c='code'
+alias subl='sublimetext'
+
+# PS aliases.
+alias psa='ps aux'
+alias psg='ps aux | grep -i'
+
+#
+# Services
+#
+rsmysql='sudo systemctl restart mysqld.service'
+
+# Human readable DF & DU.
+alias df='df -h'
+alias du='du -h -d 2'
+
+# Clear & list directory.
+alias cls='clear; ls'
+alias clr='clear'
+
+# LS & grep.
+alias lsg='ll | grep -i'
+alias lla='ls -lah'
+
+# Make cp & mv to be verbose.
+alias cp='cp -v'
+alias mv='mv -v'
+
+# Prettyping
+alias ping=prettyping
+
+# Npm global updates
+function npmgu() {
+  for package in $(npm -g outdated --parseable --depth=0 | cut -d: -f4)
+  do
+      npm -g --force install "$package"
+  done
+}
+
+#
+# Internet
+#
+
+# Get external IP.
+alias ip='dig +short myip.opendns.com @resolver1.opendns.com'
+
+# Flush Directory Service cache.
+alias flush='dscacheutil -flushcache && killall -HUP mDNSResponder'
+
+# Dig.
+alias dig='dig +nocmd any +multiline +noall +answer'
+
+# Edit the hosts file.
+alias hosts='sudo $EDITOR /etc/hosts'
+
+#
+# Dev
+#
+
+# URL encode.
+alias urlencode='python -c "import sys, urllib as ul; print ul.quote_plus(sys.argv[1]);"'
+
+# Delete local branches which have already been merged into the current HEAD.
+alias gitcleanup='git branch --merged | grep -v "\*" | xargs -n 1 git branch -d'
+
+#
+# Git
+#
+alias gpl='git pull --prune'
+alias gs='git status'

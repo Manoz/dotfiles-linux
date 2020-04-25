@@ -1,0 +1,40 @@
+[user]
+	email = manoz@outlook.com
+	name = Kevin Legrand
+[github]
+	user = Manoz
+[commit]
+	gpgsign = true
+	verbose = true
+[gpg]
+	program = /usr/bin/gpg
+[hub]
+	protocol = ssh
+[grep]
+	lineNumber = true
+[pager]
+	diff = diff-so-fancy | less --tabs=2 -RFX
+	show = diff-so-fancy | less --tabs=2 -RFX
+[color]
+	ui = true
+[color "diff"]
+	commit = "yellow bold"
+	frag = "magenta bold"
+	meta = "yellow"
+	new = "green bold"
+	old = "red bold"
+	whitespace = "red reverse"
+[color "diff-highlight"]
+	newHighlight= "green bold 22"
+	newNormal= "green bold"
+	oldHighlight= "red bold 52"
+	oldNormal= "red bold"
+[stash]
+	showPatch = true
+[status]
+	showUntrackedFiles = all
+	submoduleSummary = true
+[diff-so-fancy]
+	stripLeadingSymbols = false
+[core]
+	Filemode = false
