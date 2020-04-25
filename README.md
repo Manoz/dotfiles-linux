@@ -1,5 +1,6 @@
+<div align="center">
 <img src="https://user-images.githubusercontent.com/1554207/80279462-26dc2c00-86fe-11ea-9169-545c5dad6f25.png" alt="Dotfiles Linux banner"/>
-
+</div>
 
 ## 🤖 Introduction
 
